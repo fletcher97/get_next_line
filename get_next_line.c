@@ -12,13 +12,13 @@
 
 #include "get_next_line.h"
 
-int64_t	ft_set(int64_t *a, int64_t b)
+int64_t		ft_set(int64_t *a, int64_t b)
 {
 	*a = b;
 	return (b);
 }
 
-int64_t	ft_ternary(int flag, int64_t a, int64_t b)
+int64_t		ft_ternary(int flag, int64_t a, int64_t b)
 {
 	if (flag)
 		return (a);
@@ -36,10 +36,10 @@ static char	*rem_line(char **saved)
 	if (ft_strchr(*saved, '\n'))
 		end = ft_strchr(*saved, '\n') - *saved;
 	else
-		end = (size_t) - 1;
+		end = (size_t)-1;
 	ret = ft_substr(*saved, 0, end);
-	if (end != (size_t) - 1)
-		temp = ft_substr(*saved, end + 1, (size_t) - 1);
+	if (end != (size_t)-1)
+		temp = ft_substr(*saved, end + 1, (size_t)-1);
 	else
 		temp = ft_substr("", 0, 0);
 	free(*saved);
@@ -76,7 +76,7 @@ static int	get_line(int fd, char **saved, char **line)
 	return ((saved[fd] && ft_strlen(saved[fd]) != 0) || aux);
 }
 
-int	get_next_line(int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
 	static char	*saved[FD_MAX_COUNT];
 
