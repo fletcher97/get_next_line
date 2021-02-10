@@ -13,11 +13,13 @@ echo "Running tests:"
 
 cd $pwd/42cursus_gnl_tests
 if [ ! -f ".altered" ]; then
-	sed -i 's/.\/get_next_line/../' Makefile
-	sed -i 's/BONUS=no/BONUS=yes/' Makefile
+	sed -i.temp 's/.\/get_next_line/../'  Makefile && rm Makefile.temp
+	sed -i.temp '12 s/./sh&/' Makefile' && rm Makefile.temp
 	touch .altered
 fi
 make
+sleep 2
+make bonus
 
 echo -e '\u001b[0m'
 
