@@ -20,10 +20,10 @@ echo "Running tests:"
 cd $pwd/42cursus_gnl_tests
 if [ ! -f ".altered" ]; then
 	sed -i.tmp 's/.\/get_next_line/../'  Makefile && rm Makefile.tmp
-	sed -i.tmp '12 s/\.\//sh &/' Makefile && rm Makefile.tmp
-	sed -i.tmp '16 s/\.\//sh &/' Makefile && rm Makefile.tmp
-	sed -i.tmp '52 s/\.\//sh &/' compile_and_run.sh && rm compile_and_run.sh.tmp
-	sed -i.tmp '60 s/\.\//sh &/' compile_and_run.sh && rm compile_and_run.sh.tmp
+	sed -i.tmp '12 s/\.\//bash &/' Makefile && rm Makefile.tmp
+	sed -i.tmp '16 s/\.\//bash &/' Makefile && rm Makefile.tmp
+	sed -i.tmp '52 s/\.\//bash &/' compile_and_run.sh && rm compile_and_run.sh.tmp
+	sed -i.tmp '60 s/\.\//bash &/' compile_and_run.sh && rm compile_and_run.sh.tmp
 	touch .altered
 fi
 make
