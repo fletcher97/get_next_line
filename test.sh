@@ -7,6 +7,7 @@ echo "Downloading files:"
 [ -d 42cursus_gnl_tests ] || git clone https://github.com/mrjvs/42cursus_gnl_tests.git
 [ -d get-next-line-testing-tools ] || git clone https://github.com/TinfoilPancakes/get-next-line-testing-tools.git
 [ -d 42TESTERS-GNL ] || git clone https://github.com/Mazoise/42TESTERS-GNL.git
+[ -d gnlTester ] || git clone https://github.com/Tripouille/gnlTester.git
 
 echo "Download complete."
 echo "Running tests:"
@@ -44,3 +45,6 @@ cd $pwd/42TESTERS-GNL
 bash ./all_tests_with_bonus.sh
 
 echo -e '\033[0m'
+
+cd $pwd/gnlTester
+make a
