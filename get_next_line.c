@@ -6,7 +6,7 @@
 /*   By: mgueifao <mgueifao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 15:20:08 by mgueifao          #+#    #+#             */
-/*   Updated: 2021/02/08 10:33:47 by mgueifao         ###   ########.fr       */
+/*   Updated: 2021/03/03 19:42:03 by mgueifao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*rem_line(char **saved)
 	if (end != (size_t) - 1)
 		temp = ft_substr(*saved, end + 1, (size_t) - 1);
 	else
-		temp = ft_substr("", 0, 0);
+		temp = NULL;
 	free(*saved);
 	*saved = temp;
 	return (ret);
