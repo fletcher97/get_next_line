@@ -42,19 +42,19 @@ sts/41_hard_test_large_file.spec.c && rm moulitest_files/get_next_line_tests/te\
 sts/41_hard_test_large_file.spec.c.tmp
 
 	sed -i.tmp 's/read(fd3, NULL, 10);/read(fd3, \&t, 10);/' moulitest_files/ge\
-t_next_line_tests/tests/41_hard_test_large_file.spec.c && moulitest_files/get_n\
-ext_line_tests/tests/41_hard_test_large_file.spec.c.tmp
+t_next_line_tests/tests/41_hard_test_large_file.spec.c && rm moulitest_files/ge\
+t_next_line_tests/tests/41_hard_test_large_file.spec.c.tmp
 
 	sed -i.tmp '12 s/^/	char	t[11];/' moulitest_files/get_next_line_tests/te\
-sts/42_hard_test_one_big_fat_line.spec.c && moulitest_files/get_next_line_tests\
-/tests/42_hard_test_one_big_fat_line.spec.c.tmp
+sts/42_hard_test_one_big_fat_line.spec.c && rm moulitest_files/get_next_line_te\
+sts/tests/42_hard_test_one_big_fat_line.spec.c.tmp
 
 	sed -i.tmp 's/read(fd3, NULL, 10);/read(fd3, \&t, 10);/' moulitest_files/ge\
-t_next_line_tests/tests/42_hard_test_one_big_fat_line.spec.c && moulitest_files\
-/get_next_line_tests/tests/42_hard_test_one_big_fat_line.spec.c.tmp
+t_next_line_tests/tests/42_hard_test_one_big_fat_line.spec.c && rm moulitest_fi\
+les/get_next_line_tests/tests/42_hard_test_one_big_fat_line.spec.c.tmp
 
 	sed -i.tmp 's/..\/..\/..\/..\/get_next_line/..\/..\/..\/../' moulitest_file\
-s/testframework/v3/Makefile && moulitest_files/testframework/v3/Makefile.tmp
+s/testframework/v3/Makefile && rm moulitest_files/testframework/v3/Makefile.tmp
 
 	touch .altered
 fi
