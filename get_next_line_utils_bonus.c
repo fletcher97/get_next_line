@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgueifao <mgueifao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 14:31:30 by mgueifao          #+#    #+#             */
-/*   Updated: 2021/02/08 10:38:21 by mgueifao         ###   ########.fr       */
+/*   Updated: 2021/04/22 10:29:46 by mgueifao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	if (!src && !dest)
 		return (NULL);
-	d = (t_uc*)dest;
-	s = (t_uc*)src;
+	d = (t_uc *)dest;
+	s = (t_uc *)src;
 	i = 0;
 	while (i < n)
 	{
